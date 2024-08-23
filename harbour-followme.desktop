@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=FollowMe
+Exec=sailfish-qml harbour-followme
+Icon=harbour-followme
+X-Nemo-Application-Type=silica-qt5
+
+[X-Sailjail]
+Sandboxing=Disabled
