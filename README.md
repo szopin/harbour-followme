@@ -1,4 +1,4 @@
-Based on https://github.com/wiktorek140 whcih was based on https://github.com/alien999999999
+Based on https://github.com/wiktorek140 which was based on https://github.com/alien999999999
 
 # harbour-followme
 FollowMe:
