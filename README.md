@@ -1,3 +1,5 @@
+Based on https://github.com/wiktorek140 whcih was based on https://github.com/alien999999999
+
 # harbour-followme
 FollowMe:
 SailfishOS Manga/Comic online/offline reader 
