@@ -1,0 +1,76 @@
+{
+        'label': "MangaReaderTV",
+        'url': "https://mangareader.tv",
+        'search': {
+                'label': "Search",
+                'pathSuffix': "/search/?",
+                'pathQueryPrefix': "w",
+                'pathQuery': "=",
+                'pathQuerySuffix': "",
+                 'preFilter': 'Results</div>',
+                'filter': '<div class="d57">[^<]+<a href="/manga/([^"]+)">([^<]+)</a>?',
+                'filterName': 2,
+                           'filterId': 2,
+                'filterFile': 1,
+        
+                'filePrefix': "",
+                'fileSuffix': "",
+                'fileCumulative': True,
+                'filePrefixBase': True,
+                'type': "list"
+        },
+        'levels': [
+                {
+                        'label': "Manga",
+                        'pathSuffix': "/alphabetical",
+                        'preFilter': '<div class="d40">',
+                        'filter': '<li>[^<]+<a href="/manga/([^"]+)">([^<]+)</a>',
+                        'filterName': 2,
+                                'filterId': 2,
+                        'filterFile': 1,
+                        'filePrefix': "/manga/",
+                        'fileSuffix': "",
+                        'fileCumulative': True,
+                        'filePrefixBase': True,
+                        'type': "list"
+                },
+    
+                {
+                        'label': "Manga",
+                        'preFilter': 'class="d48"',
+                        'filter': '<i class="d16 d45"></i>[^<]+<a href="(/chapter/[^/]+/chapter-([^"]+))">[^<]+</a>',
+                        'filterName': 2,
+                              'filterId': 2,  
+                        'filterFile': 1,
+                        'filePrefix': "",
+                        'fileSuffix': "",
+                        'fileCumulative': False,
+                        'filePrefixBase': True,
+                        'type': "entry"
+                },
+
+                {
+                        'label': "Chapter",
+                        'preFilter': 'class="img-loading"',
+                        'filter': 'data-src="(https://[^/]+/([^"]+))" width=',
+                        'filterName': 2,
+                        'filterId': 2,
+                        'filterFile': 1,
+                        'filePrefix': "",
+                        'fileSuffix': "",
+                        'fileCumulative': False,
+                        'filePrefixBase': False,
+                        'type': "entry"
+                },
+                {
+                        'label': "Image",
+                        'preFilter': '',
+                        'filter': 'data-src="(https://[^/]+/[^"]+)" width=',
+                        'filePrefix': "",
+                        'fileSuffix': "",
+                        'fileCumulative': True,
+                        'filePrefixBase': False,
+                        'type': "image"
+                },
+        ]
+}
