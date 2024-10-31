@@ -1,0 +1,76 @@
+{
+        'label': "ManhwaFull",
+        'url': "https://manhwafull.net",
+        'search': {
+                'label': "Search",
+                'pathSuffix': "/?",
+                'pathQueryPrefix': "s",
+                'pathQuery': "=",
+                'pathQuerySuffix': "",
+                        'preFilter': '<div class="comics-grid">',
+                'filter': 'Latest Chapter:</p>[^<]+<a href="https://manhwafull.net/(([0-9a-z-]+)-chapter-[^"]+)" class="chap" title="([0-9a-zA-Z\ -]+) Chapter [^"]+">',
+                'filterName': 3,
+        'filterId': 2,
+                'filterFile': 1,
+                'filePrefix': "/",
+                'fileSuffix': "",
+        
+                'fileCumulative': False,
+                'filePrefixBase': True,
+                'type': "list"
+        },
+        'levels': [
+                {
+                        'label': "Manga",
+                        'pathSuffix': "/comic-list/",
+                        'preFilter': '<div class="comics-grid">',
+                        'filter': 'Latest Chapter:</p>[^<]+<a href="https://manhwafull.net/(([0-9a-z-]+)-chapter-[^"]+)" class="chap" title="([0-9a-zA-Z\ -]+) Chapter [^"]+">',
+                        'filterName': 3,
+               'filterId': 2,
+                        'filterFile': 1,
+                        'filePrefix': "/",
+                        'fileSuffix': "",
+                        'fileCumulative': False,
+                        'filePrefixBase': True,
+                        'type': "list"
+                },
+    
+                {
+                        'label': "Chapter",
+                        'preFilter': '<option',
+                        'filter': '[^]?value="https://manhwafull.net/([^"]+-chapter-?([0-9-a-z]+))">[^<]+ Chapter ([0-9a-zA-Z\.\ -]+)</option>?',
+                        'filterName': 3,
+        'filterId': 3,
+                        'filterFile': 1,
+                        'filePrefix': "/",
+                        'fileSuffix': "",
+                        'fileCumulative': False,
+                        'filePrefixBase': True,
+                        'type': "entry"
+                },
+
+                {
+                        'label': "Page",
+                        'preFilter': '<center>',
+                        'filter': '<img src="(https://[^/]+/([^"\r\n]+))',
+                        'filterName': 2,
+        'filterId': 2,
+                        'filterFile': 1,
+                        'filePrefix': "",
+                        'fileSuffix': "",
+                        'fileCumulative': False,
+                        'filePrefixBase': False,
+                        'type': "image"
+                },
+                {
+                        'label': "Image",
+                        'preFilter': '',
+                        'filter': '',
+                        'filePrefix': "",
+                        'fileSuffix': "",
+                        'fileCumulative': False,
+                        'filePrefixBase': False,
+                        'type': "image"
+                },
+        ]
+}
