@@ -3,18 +3,18 @@
         'url': "https://manhwafull.net",
         'search': {
                 'label': "Search",
-                'pathSuffix': "/?",
-                'pathQueryPrefix': "s",
+                'pathSuffix': "/manga-list.html?",
+                'pathQueryPrefix': "name",
                 'pathQuery': "=",
                 'pathQuerySuffix': "",
-                        'preFilter': '<div class="comics-grid">',
-                'filter': 'Latest Chapter:</p>[^<]+<a href="https://manhwafull.net/(([0-9a-z-]+)-chapter-[^"]+)" class="chap" title="([0-9a-zA-Z\ -]+) Chapter [^"]+">',
-                'filterName': 3,
+                        'preFilter': '<div class="card">',
+                'filter': 'thumb_attr series-title">[^<]+<a href="([^"]+)" title="([^"]+)">',
+                'filterName': 2,
         'filterId': 2,
                 'filterFile': 1,
                 'filePrefix': "/",
                 'fileSuffix': "",
-        
+
                 'fileCumulative': False,
                 'filePrefixBase': True,
                 'type': "list"
@@ -22,10 +22,10 @@
         'levels': [
                 {
                         'label': "Manga",
-                        'pathSuffix': "/comic-list/",
-                        'preFilter': '<div class="comics-grid">',
-                        'filter': 'Latest Chapter:</p>[^<]+<a href="https://manhwafull.net/(([0-9a-z-]+)-chapter-[^"]+)" class="chap" title="([0-9a-zA-Z\ -]+) Chapter [^"]+">',
-                        'filterName': 3,
+                        'pathSuffix': "/manga-list.html",
+                        'preFilter': '<div class="card-body">',
+                        'filter': 'thumb_attr series-title">[^<]+<a href="([^"]+)" title="([^"]+)">',
+                        'filterName': 2,
                'filterId': 2,
                         'filterFile': 1,
                         'filePrefix': "/",
@@ -34,25 +34,25 @@
                         'filePrefixBase': True,
                         'type': "list"
                 },
-    
+
                 {
                         'label': "Chapter",
-                        'preFilter': '<option',
-                        'filter': '[^]?value="https://manhwafull.net/([^"]+-chapter-?([0-9-a-z]+))">[^<]+ Chapter ([0-9a-zA-Z\.\ -]+)</option>?',
+                        'preFilter': 'list-chapters',
+                        'filter': '<a href="(read-.*-chapter-([^\.])\.html)" title="([^"]+)">',
                         'filterName': 3,
-        'filterId': 3,
+        'filterId': 2,
                         'filterFile': 1,
-                        'filePrefix': "/",
+                        'filePrefix': "https://bidmanga.com/",
                         'fileSuffix': "",
                         'fileCumulative': False,
-                        'filePrefixBase': True,
+                        'filePrefixBase': False,
                         'type': "entry"
                 },
 
                 {
                         'label': "Page",
-                        'preFilter': '<center>',
-                        'filter': '<img src="(https://[^/]+/([^"\r\n]+))',
+                        'preFilter': 'chapter-content',
+                        'filter': "data-original='(.*(url=[^']+))'",
                         'filterName': 2,
         'filterId': 2,
                         'filterFile': 1,
