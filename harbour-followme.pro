@@ -51,7 +51,6 @@ DIST_FILES += qml/harbour-followme.qml \
         qml/plugins/MangaReader/.FollowMe \
         qml/scripts/download.js \
         qml/plugins/MangaTown/.FollowMe \
-        qml/plugins/MangaReaderTV/.FollowMe \
         qml/plugins/ManhwaFull/.FollowMe \
         harbour-followme.svg \
         rpm/harbour-followme.spec
