@@ -11,6 +11,7 @@ Page {
 
     property var entryItems: ({})
     property bool horizon: horizontal.value
+    property bool sizeauto: sizecalc.value
 ConfigurationGroup {
         id: mainConfig
         path: "/apps/harbour-followme"
@@ -18,6 +19,10 @@ ConfigurationGroup {
     ConfigurationValue {
         id: horizontal
         key: "/apps/harbour-followme/horizontal"
+    }
+    ConfigurationValue {
+        id: sizecalc
+        key: "/apps/harbour-followme/sizecalc"
     }
     signal gotoEntry (var entry)
     signal refreshList ()
@@ -38,6 +43,7 @@ ConfigurationGroup {
 function horizonref(){
 
         horizon = mainConfig.value("horizontal", 0);
+        sizeauto = mainConfig.value("sizecalc", 0);
 
     }
     SilicaListView {
@@ -220,7 +226,7 @@ function horizonref(){
                 base: app.dataPath
                 locator: entryItem.locator
 
-                autostart: entryItem.items.length > 0 && entryItem.last != undefined && entryItem.last != -1
+                autostart: entryItem.items.length > 0 && entryItem.last != undefined && entryItem.last != -1 && sizeauto
 
                 onFinished: {
                     if (success) {

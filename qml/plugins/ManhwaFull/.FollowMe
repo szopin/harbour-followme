@@ -38,14 +38,14 @@
                 {
                         'label': "Chapter",
                         'preFilter': 'list-chapters',
-                        'filter': '<a href="(read-.*-chapter-([^\.])\.html)" title="([^"]+)">',
-                        'filterName': 3,
+                        'filter': '<a href="(read-.*-chapter-([^\.]+)\.html)" title="([^"]+)">',
+                        'filterName': 1,
         'filterId': 2,
                         'filterFile': 1,
-                        'filePrefix': "https://bidmanga.com/",
+                        'filePrefix': "/",
                         'fileSuffix': "",
                         'fileCumulative': False,
-                        'filePrefixBase': False,
+                        'filePrefixBase': True,
                         'type': "entry"
                 },
 
