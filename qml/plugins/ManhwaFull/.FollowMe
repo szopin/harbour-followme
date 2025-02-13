@@ -52,7 +52,7 @@
                 {
                         'label': "Page",
                         'preFilter': 'chapter-content',
-                        'filter': "data-original='(.*(url=[^']+))'",
+                        'filter': "data-original='(https://[^\/]+([^']+))'",
                         'filterName': 2,
         'filterId': 2,
                         'filterFile': 1,
