@@ -69,4 +69,5 @@ TRANSLATIONS += \
     translations/harbour-followme-fr.ts
 
 DISTFILES += \
+    qml/components/FollowMeImageH.qml \
     rpm/harbour-followme.spec

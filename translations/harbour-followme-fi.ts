@@ -51,46 +51,49 @@
 <context>
     <name>EntryPageH</name>
     <message>
-        <location filename="../qml/pages/EntryPageH.qml" line="37"/>
+        <location filename="../qml/pages/EntryPageH.qml" line="60"/>
         <source>Jump To</source>
         <translation type="unfinished">Siirry lukuun</translation>
     </message>
     <message>
-        <location filename="../qml/pages/EntryPageH.qml" line="40"/>
+        <location filename="../qml/pages/EntryPageH.qml" line="63"/>
         <source>Jump to chapter</source>
         <translation type="unfinished">Siirry lukuun</translation>
     </message>
     <message>
-        <location filename="../qml/pages/EntryPageH.qml" line="42"/>
+        <location filename="../qml/pages/EntryPageH.qml" line="65"/>
         <source>chapter</source>
         <translation type="unfinished">Luku</translation>
     </message>
     <message>
-        <location filename="../qml/pages/EntryPageH.qml" line="53"/>
+        <location filename="../qml/pages/EntryPageH.qml" line="76"/>
         <source>Back</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/EntryPageH.qml" line="58"/>
-        <location filename="../qml/pages/EntryPageH.qml" line="71"/>
+        <location filename="../qml/pages/EntryPageH.qml" line="81"/>
+        <location filename="../qml/pages/EntryPageH.qml" line="94"/>
         <source>Next</source>
         <translation type="unfinished">Seuraava luku</translation>
     </message>
     <message>
-        <location filename="../qml/pages/EntryPageH.qml" line="63"/>
+        <location filename="../qml/pages/EntryPageH.qml" line="86"/>
         <source>Previous</source>
         <translation type="unfinished">Edellinen luku</translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/EntryPageH.qml" line="148"/>
-        <source>Refresh</source>
-        <translation type="unfinished">Päivitä</translation>
     </message>
 </context>
 <context>
     <name>FollowMeImage</name>
     <message>
         <location filename="../qml/components/FollowMeImage.qml" line="45"/>
+        <source>Chapter</source>
+        <translation type="unfinished">Luku</translation>
+    </message>
+</context>
+<context>
+    <name>FollowMeImageH</name>
+    <message>
+        <location filename="../qml/components/FollowMeImageH.qml" line="50"/>
         <source>Chapter</source>
         <translation type="unfinished">Luku</translation>
     </message>
